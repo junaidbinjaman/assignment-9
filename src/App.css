@@ -1,0 +1,29 @@
+.App {
+    background-image: url("./img//background-img/background-img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -19px;
+    padding: 0;
+}
+
+.background-overlay {
+    background-color: rgba(0, 0, 0, 0.308);
+}
+
+.container {
+    text-align: center;
+    width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 400px;
+        height: 1700px;
+    }
+    .App {
+        margin-top: -30px;
+    }
+}

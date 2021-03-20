@@ -1,0 +1,39 @@
+.home-section {
+    display: grid;
+    grid-template-columns: 275px 275px 275px 275px;
+}
+
+.home-section img {
+    width: 100%;
+    height: 100%;
+}
+
+.bike-section,
+.car-section,
+.bus-section,
+.Metro-train-section {
+    margin-right: 10px;
+    overflow: hidden;
+    width: 250px;
+    height: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transform: translate(0px, 60%);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.322);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .home-section {
+        display: block;
+    }
+    .bike-section,
+    .car-section,
+    .bus-section,
+    .Metro-train-section {
+        margin-bottom: 29px;
+        transform: translate(0px, 0%);
+        width: 90%;
+    }
+}

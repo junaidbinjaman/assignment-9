@@ -1,0 +1,108 @@
+.RegisterForm {
+    background: white;
+    width: 460px;
+    margin: 30px auto;
+    padding: 10px 0;
+    height: 620px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.322);
+}
+
+.loginForm {
+    background: white;
+    width: 460px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.322);
+}
+
+.RegisterForm h1,
+.loginForm h1 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.RegisterForm input,
+.loginForm input {
+    height: 30px;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin-top: 35px;
+}
+
+.RegisterForm input:focus,
+.loginForm input:focus {
+    outline: none;
+}
+
+.RegisterForm input::placeholder,
+.loginForm input::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.RegisterForm input:focus::placeholder,
+.loginForm input:focus::placeholder {
+    color: white;
+}
+
+.RegisterForm input::-ms-placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.RegisterForm input:-ms-placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.RegisterForm input[type="submit"],
+.loginForm input[type="submit"] {
+    background: red;
+    width: 300px;
+    height: 44px;
+    font-size: 17px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.RegisterForm input[type="submit"]:hover,
+.loginForm input[type="submit"]:hover {
+    background: rgba(255, 0, 0, 0.657);
+}
+
+.RegisterForm p,
+.loginForm p {
+    margin-bottom: 50px;
+}
+
+.socialIcon img {
+    width: 50px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.wrong-pass {
+    margin-top: -20px;
+    font-weight: bold;
+    color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    .loginForm,
+    .RegisterForm {
+        width: 90%;
+    }
+}

@@ -1,0 +1,6 @@
+[{ "vehicleImg": "https://bit.ly/30Xcpur", "name": "Car", "totalPassenger": 2, "fare": "$14.21" },
+    { "vehicleImg": "https://bit.ly/3bZgmFe", "name": "Car", "totalPassenger": 6, "fare": "$19.51" },
+    { "vehicleImg": "https://bit.ly/3vG9WCK", "name": "Car", "totalPassenger": 4, "fare": "$17.46" },
+    { "vehicleImg": "https://bit.ly/3vHiIjZ", "name": "Car", "totalPassenger": 4, "fare": "$3.70" }
+
+]

@@ -1,0 +1,78 @@
+.header-section {
+    display: grid;
+    grid-template-columns: 550px 650px;
+}
+
+.logo-section {
+    font-size: 33px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+    text-shadow: 3px 4px black;
+    text-align: left;
+}
+
+.logo-section h3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-section ul {
+    display: flex;
+    margin-top: 47px;
+}
+
+.navbar-section li {
+    list-style: none;
+    margin-right: 17px;
+    text-decoration: none;
+}
+
+.navbar-section li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    transition: all 0.3s ease;
+}
+
+.navbar-section li:hover>a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.navbar-section button {
+    font-size: 20px;
+    padding: 9px 26px;
+    margin-top: -4px;
+    background: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.navbar-section button:hover {
+    box-shadow: 1px 1px 0px black;
+    background: rgba(255, 0, 0, 0.623);
+    font-size: 20.5px;
+    padding: 9.5px 26.5px;
+    margin-top: -4.5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-section {
+        display: block;
+        text-align: center;
+    }
+    .navbar-section {
+        display: none;
+    }
+    .logo-section {
+        font-size: 25px;
+        text-align: center;
+        padding-top: 30px;
+    }
+}

@@ -1,0 +1,62 @@
+
+
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Destination from "./components/Destination/Destination";
+import Blog from "./components/Blog/Blog";
+import Contact from "./components/Contact/Contact";
+import Header from "./components/Header/Header";
+import NotMatch from "./components/NotMatch/NotMatch";
+import Login from "./components/Login/Login";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import { createContext, useState } from "react";
+
+export const UserContext = createContext();
+export const selectedVehicle = createContext();
+
+function App() {
+  const [logedInUser, setLoggedInUser] = useState({});
+  const [vehicleData, setVehicleData] = useState("");
+  console.log(vehicleData);
+  return (
+    <div className="App">
+      <div className="background-overlay">
+        <div className="container">
+          <selectedVehicle.Provider value={[vehicleData, setVehicleData]}>
+            <UserContext.Provider value={[logedInUser, setLoggedInUser]}>
+              <Router>
+                <Header></Header>
+                <Switch>
+                  <Route path="/home">
+                    <Home />
+                  </Route>
+                  <Route path="/login">
+                    <Login />
+                  </Route>
+                  <PrivateRoute path="/destination/:vehicle">
+                    <Destination />
+                  </PrivateRoute>
+                  <Route path="/blog">
+                    <Blog />
+                  </Route>
+                  <Route path="contact">
+                    <Contact />
+                  </Route>
+                  <Route exact path="/">
+                    <Home />
+                  </Route>
+                  <Route path="*">
+                    <NotMatch />
+                  </Route>
+                </Switch>
+              </Router>
+            </UserContext.Provider>
+          </selectedVehicle.Provider>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
